@@ -8,6 +8,7 @@
 <body>
     <h2>## Partie 1 TP3: Variables, constantes, types et chaînes </h2>
 <?php 
+#Exercice 1.1:
 $état=1;
 echo "Hello PHP <br>";
 //commentaire sur un seule ligne avec //
@@ -21,6 +22,7 @@ lignnes
 // la variable $2x et `$x-y` sont invalides car il commence par un nombre et l'autre contient la caractère '-'.
 // $prix ht non valide car: il contient un espace;
 // $A et $a sont deux variables distincts car le syntaxe PHP est sensible a la casse ...;
+#Exercice 1.2:
 require 'config.php';
 echo ETABLISSEMENT ."<br>";
 echo NOTE_MIN ."<br>";
@@ -30,10 +32,12 @@ echo defined('SEUIL')."<br>";
 echo defined('INCONNUE');
 /*
 - Que se passe-t-il si vous affichez une constante non définie ?
-
+--- Afficher une constante non définie lève un avertissement (Warning) ou une erreur fatale sous PHP 8.
 - Quelle différence y a-t-il entre `const` et `define()` ?
+--- `const` définit la constante à la compilation (ne peut pas être utilisée dans un if), `define()` s'exécute à l'exécution.
 
 */
+# Exercice 1.3:
 $prix_ht = 60 ;
 $tva = 20;
 $Prix_TTC=$prix_ht * (1+($tva/100));
