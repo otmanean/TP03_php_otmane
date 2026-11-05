@@ -1,22 +1,7 @@
 <?php
 require 'config.php';
 # Exercice 2.1 : `if / elseif / else`
-function mention($note){
-    if ($note < SEUIL){
-        echo "Note :$note |Mention :Ajourné <br>";
-    }
-    elseif ($note < 12) {
-        echo "Note :$note |Mention :Passable <br>";
-    }
-    elseif ($note < 14) {
-        echo "Note :$note |Mention :Assez Bien<br>";
-    }
-    elseif ($note < 16) {
-        echo "Note :$note |Mention :Bien<br>";
-    }
-    else {
-        echo "Note :$note |Mention :Trés Bien <br>";
-    }}
+echo "<h3>#s Partie 2 : Structures de contrôle et boucles</h3>";
 mention(SEUIL);
 # Exercice 2.2 :
 $current_DATE = date("m");
