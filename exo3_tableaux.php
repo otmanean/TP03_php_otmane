@@ -1,5 +1,6 @@
 <?php
-include 'exo2_flux.php';
+include 'config.php';
+require_once 'entete_inc.php';
 ?>
 <html>
 <head>
@@ -11,7 +12,9 @@ include 'exo2_flux.php';
 <h2> -Partie 3: Tableaux :</h2>
 <h3> Exercice 3.2 : Affichage HTML</h3>
 <?php
-
+// 1. Au tout début du fichier : inclusion de l'en-tête et du menu
+include 'includes/entete_inc.php';
+include 'includes/menu_inc.php';
 $notes = [
     "Mohamed" => 16, "Ahmed" => 14, "Hind" => 13, "Aicha" => 15,
     "Samir" => 13, "Zakaria" => 13, "Rafik" => 10, "Ilham" => 9,
@@ -74,6 +77,9 @@ $b = ["y" => 2, "x" => 1];
 // $a + $b : Union. Conserve les clés de $a, ajoute celles de $b non existantes (donc ["x"=>1, "y"=>2])
 // $a == $b : true (mêmes paires clé/valeur)
 // $a === $b : false (l'ordre des éléments n'est pas strictement identique)
+
+// 3. À la toute fin du fichier : inclusion du pied de page
+include 'includes/pied_inc.php';
 ?>
 </body>
 
