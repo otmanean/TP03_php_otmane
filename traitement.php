@@ -35,8 +35,14 @@ $noteMathSecurisee = htmlspecialchars((string) $noteMath, ENT_QUOTES, 'UTF-8');
 echo '<h2>Récapitulatif</h2>';
 echo '<p>Nom : ' . $nomSecurise . '</p>';
 echo '<p>Note Info : ' . $noteInfoSecurisee . '</p>';
-echo '<p>Note Math : ' . $noteMathSecurisee . '</p>';                                                                  0     
+echo '<p>Note Math : ' . $noteMathSecurisee . '</p>';
 
-// Un mot de passe doit utiliser POST car GET expose les données dans l'URL.
-// $_REQUEST contient $_GET, $_POST et $_COOKIE fusionnés.
+$fichier = fopen('data/notes.csv', 'a');
+if ($fichier !== false) {
+    fputcsv($fichier, [$nom, $noteInfo, $noteMath], ';');
+    fclose($fichier);
+    echo '<p>Enregistrement ajouté dans le fichier CSV.</p>';
+} else {
+    echo '<p>Erreur : impossible d’ouvrir le fichier CSV.</p>';
+}
 ?>
