@@ -8,8 +8,8 @@ $dateFinSemestre = new DateTime('2026-12-30');
 $intervalle = $aujourdHui->diff($dateFinSemestre);
 $joursRestants = $intervalle->format('%a jours');
 
-// 3. Validation d'une date saisie (ex: 29 février 2026 -> invalide car année non bissextile)
-$jour = 29; $mois = 2; $annee = 2026;
+// 3. Validation d'une date saisie 
+$jour = 29; $mois =8 ; $annee = 2026;
 $estValide = checkdate($mois, $jour, $annee);
 ?>
 <footer>
